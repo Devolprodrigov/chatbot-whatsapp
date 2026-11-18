@@ -5,13 +5,12 @@ const qrcode = require("qrcode-terminal");
 const { Client, LocalAuth } = require("whatsapp-web.js");
 
 // =====================================
-// CONFIGURAÇÃO DO CLIENTE
+// CONFIGURAÇÃO DO CLIENTE (Otimizado para Nuvem / Render / Linux)
 // =====================================
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
     headless: true,
-    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
